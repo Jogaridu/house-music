@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music House</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div id="caixaUsuario">
+            <img src="image/imgCriador.png" alt="Imagem do criador do site" id="imgCriador">
+
+            <h2>JORGE GABRIEL</h2>
+        </div>
+
+        <div id="caixaRedeSocial">
+            
+            <a href="https://github.com/Jogaridu" target="_blank">
+                <figure class="imgRedeSocial"><img src="image/imgGit.png" alt="Icone GitHub"></figure>
+                <figcaption class="formatarTexto">GitHub</figcaption>
+            </a>
+
+            <a href="https://www.linkedin.com/in/jorge-gabriel-ricci-06aa581a1/" target="_blank">
+                <figure class="imgRedeSocial"><img src="image/imgLinkedin.png" alt="Icone LinkedIn"></figure>
+                <figcaption class="formatarTexto">LinkedIn</figcaption>
+            </a>
+
+        </div>
+    </header>
+
+    <main id="caixaCentraliza">
+        <form action="index.html">
+            <input type="text" id="nomeArtista" placeholder="Banda/Cantor...">
+            
+            <input type="button" id="btnPesquisar" value="Pesquisar">
+        </form>
+
+        <div id="caixaExibicao"></div>
+
+        <div id="saidaMusicaArtista">
+            <ul id="listaCards"></ul>
+        </div>
+
+        <!-- <div id="caixaTutorial">
+            <figure id="imgTutorial">
+                <img src="image/imgTeste.png" alt="Imagem tutorial">
+            </figure>
+        </div> -->
+    </main>
+    
+    
+    <script src="js/apiDeezer.js"></script>
+    <script src="js/apiLyrics.js"></script>
+    <script src="js/animacoes.js"></script>
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
