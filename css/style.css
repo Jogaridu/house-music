@@ -165,7 +165,7 @@ h1 {
 
 /* CORPO - FORMULARIO */
 
-form {
+#caixaPesquisa {
     height: 100px;
     width: 100%;
     /* background-color: crimson; */
@@ -239,16 +239,17 @@ input[type=button]:active {
     margin-left: 90px;
     margin-top: 20px;
     margin-bottom: 30px;
+    padding-bottom: 20px;
     float: left;
     text-align: left;
     border-radius: 10px;
-    /* background-color: black; */
 }
 
 .cardItens:hover {
     box-shadow: 1px 1px 10px black;
     transform: scale(1.1);
     transition: 1s;
+    background-color: rgba(128, 128, 128, 0.466);
     cursor: pointer;
 }
 
@@ -263,8 +264,7 @@ input[type=button]:active {
 .conteudoAlbum p:nth-child(2) {
     height: 50px;
     width: 100%;
-    padding-top: 15px;
-    padding-left: 15px;
+    padding: 15px;
     box-sizing: border-box;
     cursor: pointer;
     user-select: none;
@@ -564,7 +564,6 @@ audio {
         overflow: hidden;
         text-align: center;
         margin: 0px auto;
-        background-color: turquoise;
     }
     
     .conteudoAlbum p:nth-child(1),

@@ -5,9 +5,10 @@ const preencherLetra = (letra, idMusica) => {
 
     let arrayMusicaInfo = null;
 
-    db.forEach(musicaInfo => {
+    bdMusicas.forEach(musicaInfo => {
         if (musicaInfo.id == idMusica) {
             arrayMusicaInfo = musicaInfo;
+
         }
     });
 
@@ -32,11 +33,10 @@ const preencherLetra = (letra, idMusica) => {
         document.querySelector(".saidaLetra").innerText = letra.lyrics;
 
     } else {
-        document.querySelector(".saidaLetra").innerText = "A música não possui letra...";
+        document.querySelector(".saidaLetra").innerText = "A música não possui letra ou não foi localizada no banco...";
 
     }
     
-
 }
 
 const pesquisarLetra = async (evento) => {
@@ -59,7 +59,6 @@ const pesquisarLetra = async (evento) => {
 
     const jsonLetra = await pegarLetra.json();
     
-
     preencherLetra(jsonLetra, idMusica);
     
 }
