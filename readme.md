@@ -6,7 +6,7 @@ O projeto em questão foram utilizadas duas APIs: Deezer e LyricsOVH. Para funci
 
 
 
-## Passo a Passo para consumir a api
+## Passo a Passo para consumir a API
 
 ### Deezer:
 
@@ -34,7 +34,9 @@ O projeto em questão foram utilizadas duas APIs: Deezer e LyricsOVH. Para funci
 [x] Solução
 
 [] API lyricsOVH retorna a letra apenas se o nome da música e artista forem informados corretamente.
+
 [x] Obrigatoriamente deve informar ambos os nomes na url, mesmo que possuam nomes composto e sejam separados por espaços.
 
 [] Caso tenha a necessidade de criar um site com informações além de letras musicáis apenas a API lyricsOVH não irá satifazer.
+
 [x] Buscar outras APIs que possuam mais informações sobre música no geral. 
