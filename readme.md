@@ -30,13 +30,13 @@ O projeto em questão foram utilizadas duas APIs: Deezer e LyricsOVH. Para funci
 
 ## Problemas/Solucoes
 
-[] Problema
-[x] Solução
+- [ ] Problema 
+- [x] Solução
+--------------------------------------------------------------------------------------------------------
+- [ ] API lyricsOVH retorna a letra apenas se o nome da música e artista forem informados corretamente.
 
-[] API lyricsOVH retorna a letra apenas se o nome da música e artista forem informados corretamente.
+- [x] Obrigatoriamente deve informar ambos os nomes na url, mesmo que possuam nomes composto e sejam separados por espaços.
 
-[x] Obrigatoriamente deve informar ambos os nomes na url, mesmo que possuam nomes composto e sejam separados por espaços.
+- [ ] Caso tenha a necessidade de criar um site com informações além de letras musicáis apenas a API lyricsOVH não irá satifazer.
 
-[] Caso tenha a necessidade de criar um site com informações além de letras musicáis apenas a API lyricsOVH não irá satifazer.
-
-[x] Buscar outras APIs que possuam mais informações sobre música no geral. 
+- [x] Buscar outras APIs que possuam mais informações sobre música no geral. 
