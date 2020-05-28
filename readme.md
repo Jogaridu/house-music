@@ -6,19 +6,34 @@ O projeto em questão foram utilizadas duas APIs: Deezer e LyricsOVH. Para funci
 
 
 
-## Passo a Passo para consumir a API
+## Passo a Passo para consumir as APIs
 
-### Deezer:
+### Deezer API:
 
 1. Nesse projeto foi utilizado o Fetch para consumir a API. Nele adicionamos os seguintes pâmetros: A URL do deezer e um objeto de configuração.
 
-2. A URL utilizada é a "https://deezerdevs-deezer.p.rapidapi.com/search?", com um parâmetro "q" para requisitar qualquer busca do usuário (Nome de música, banda ou artista).
+2. A URL utilizada é a "https://deezerdevs-deezer.p.rapidapi.com/search?", com um parâmetro "q" para requisitar qualquer busca do usuário (Nome de música, banda ou artista). Basta colocar após o ponto de interrogação
 
 3. No objeto adicionamos dois índices, o method "GET" e o headers que terá um objeto no qual tem mais dois campos: "**x-rapidapi-host**" e "**x-rapidapi-key**" e respectivamente os dados a serem informados são: url e a chave. Ambos podem ser adquiridos no site: [RapidApi](https://rapidapi.com/deezerdevs/api/deezer-1)
 
 4. Depois de informar um artista no parâmetro "q" da url e realizar o passo anterior o fetch irá retornar uma Promise.
 
 5. Por fim basta utilizar o comando _json()_ na promise retornada para assim transforma ela num objeto json.
+
+Exemplo:
+
+```
+  const url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=Coldplay}` 
+  const pegarMusica = await fetch(url, {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+            "x-rapidapi-key": "a3102307e5mshab623a8c5d43e46p169e30jsn4a94692ade61"
+        }
+    });
+
+    const jsonMusicaCompleta = await pegarMusica.json();
+ ```
 
 ### Apiary - LyricsOVH:
 
@@ -28,6 +43,15 @@ O projeto em questão foram utilizadas duas APIs: Deezer e LyricsOVH. Para funci
 
 3. Se os dados forem informados corretamente, faça exatamente como o quinto passo para consumir a API Deezer.
 
+Exemplo:
+
+```
+    const url = `https://api.lyrics.ovh/v1/Coldplay/Clocks`
+
+    const pegarLetra = await fetch(url);
+
+    const jsonLetra = await pegarLetra.json();
+```
 ## Problemas/Solucoes
 
 - [ ] Problema 
