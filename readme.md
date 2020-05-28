@@ -63,4 +63,12 @@ Exemplo:
 
 - [ ] Caso tenha a necessidade de criar um site com informações além de letras musicáis apenas a API lyricsOVH não irá satifazer.
 
-- [x] Buscar outras APIs que possuam mais informações sobre música no geral. 
+- [x] Buscar outras APIs que possuam mais informações sobre música no geral.
+
+## Tecnologias
+
+- HTML-5
+- CSS
+- JavaScript
+- Api deezer
+- lyricsOVH
