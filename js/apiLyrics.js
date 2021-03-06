@@ -29,36 +29,34 @@ const preencherLetra = (letra, idMusica) => {
     $caixaExibicao.innerHTML = "";
     $caixaExibicao.innerHTML = caixaExibicao;
 
-    if(letra.lyrics !== undefined) {
+    if (letra.lyrics !== undefined) {
         document.querySelector(".saidaLetra").innerText = letra.lyrics;
 
     } else {
         document.querySelector(".saidaLetra").innerText = "A música não possui letra ou não foi localizada no banco...";
 
     }
-    
+
 }
 
 const pesquisarLetra = async (evento) => {
 
-    const cardItem = evento.target.parentNode;
+    const $cardMusica = evento.target;
 
-    if (cardItem.getAttribute("class") === "conteudoAlbum") {
-        cardItem = cardItem.parentNode;
+    const nomeArtista = $cardMusica.dataset.artista; // Resgata o nome do artista do data
+    const nomeMusica = $cardMusica.dataset.musica; // Resgata o nome da música do data
+    const idMusica = $cardMusica.getAttribute("id"); // Pega o ID da música
 
-    }
+    mostrarCarregandoCard(true, $cardMusica); // Exibe carregamento da letra
 
-    const idMusica = cardItem.getAttribute("id");
-    const cardItemFilhos = cardItem.children;
-    const nomeArtista = cardItemFilhos[0].getAttribute("alt");
-    const nomeMusica = cardItemFilhos[0].getAttribute("title");
-
-    const url = `https://api.lyrics.ovh/v1/${nomeArtista}/${nomeMusica}`
+    const url = `https://api.lyrics.ovh/v1/${nomeArtista}/${nomeMusica}`;
 
     const pegarLetra = await fetch(url);
 
     const jsonLetra = await pegarLetra.json();
-    
+
+    mostrarCarregandoCard(false, $cardMusica); // Esconde carregamento da letra
+
     preencherLetra(jsonLetra, idMusica);
-    
+
 }

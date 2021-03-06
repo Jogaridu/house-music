@@ -6,6 +6,8 @@
     <title>Music House</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="component/loading.css">
+    <link rel="stylesheet" href="component/loading-card.css">
 </head>
 <body>
     <header>
@@ -40,14 +42,19 @@
         <div id="caixaExibicao"></div>
 
         <div id="saidaMusicaArtista">
-            <ul id="listaCards"></ul>
+            <ul id="listaCards">
+                <div id="carregar" class="boxLoading esconde">
+                    <div class="loading">
+                        <div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div>
+                    </div>
+                </div>
+            </ul>
         </div>
     </main>
     
-    
+    <script src="js/animacoes.js"></script>
     <script src="js/apiDeezer.js"></script>
     <script src="js/apiLyrics.js"></script>
-    <script src="js/animacoes.js"></script>
     <script src="js/script.js"></script>
     
 </body>

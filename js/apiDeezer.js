@@ -8,9 +8,8 @@ const limparExibicao = () => {
 
 const criarCard = (arrayMusicaInfo) => {
 
-    // 
     const card = `
-    <li id='${arrayMusicaInfo.id}' class='cardItens'>
+    <li id='${arrayMusicaInfo.id}' class='cardItens' data-artista="${arrayMusicaInfo.artist.name}" data-musica="${arrayMusicaInfo.title_short}">
         <img src="${arrayMusicaInfo.album.cover_big}" alt="${arrayMusicaInfo.artist.name}" title="${arrayMusicaInfo.title_short}" class='imgAlbum'>
         <div class='conteudoAlbum'>
             <p class='formartarTexto'>${arrayMusicaInfo.artist.name}</p>
@@ -31,12 +30,12 @@ const criarEventoClickCard = () => {
 }
 
 const preencherMusica = (todasMusicaCompleta) => {
-    
+
     const $listaCards = document.getElementById("listaCards"); // Pegando a lista que vai receber os cards
 
     // Teste lógico para saber se o artita/banda/musica existe no banco. TRATAMENTO DE ERRO
     if (todasMusicaCompleta.length !== 0) {
-        
+
         $listaCards.innerHTML = ""; // Limpando a lista de cards (caso o usuário já tenha pesquisado, ela limpa a lista da pesquisa anterior)
 
         todasMusicaCompleta.forEach(elemento => {
@@ -69,8 +68,10 @@ const pesquisarMusicaDreezer = async () => {
 
     const jsonMusicaCompleta = await pegarMusica.json(); // Transformando as informações em um JSON
 
+    mostrarCarregando(false); // Esconde o carregar
+
     bdMusicas = jsonMusicaCompleta.data; // Guardando todas as músicas da pesquisa em um BD
-    
+
     limparExibicao(); // Limpando a exibição do áudio da música
     preencherMusica(jsonMusicaCompleta.data); // Preencher as músicas no HTML
 }
