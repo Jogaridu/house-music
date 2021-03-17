@@ -5,6 +5,8 @@ const $inputPesquisar = document.getElementById("nomeArtista");
 
 $botaoPesquisar.addEventListener("click", () => {
 
+    limparExibicao(); // Limpando a exibição do áudio da música
+
     mostrarCarregando(true); // Carregamento será exibido
 
     pesquisarMusicaDreezer();
@@ -17,6 +19,7 @@ $inputPesquisar.addEventListener("keyup", (evento) => {
 
     if (key == 13) {
 
+        limparExibicao();
         mostrarCarregando(true);
         pesquisarMusicaDreezer();
 

@@ -11,9 +11,9 @@ const criarCard = (arrayMusicaInfo) => {
     const card = `
     <li id='${arrayMusicaInfo.id}' class='cardItens' data-artista="${arrayMusicaInfo.artist.name}" data-musica="${arrayMusicaInfo.title_short}">
         <img src="${arrayMusicaInfo.album.cover_big}" alt="${arrayMusicaInfo.artist.name}" title="${arrayMusicaInfo.title_short}" class='imgAlbum'>
-        <div class='conteudoAlbum'>
+        <div class='conteudoAlbumCard'>
             <p class='formartarTexto'>${arrayMusicaInfo.artist.name}</p>
-            <p class='formatarTexto'>${arrayMusicaInfo.title_short}</p>
+            <p class='formatarTexto destaque'>${arrayMusicaInfo.title_short}</p>
         </div>
     </li>`;
 
@@ -68,10 +68,11 @@ const pesquisarMusicaDreezer = async () => {
 
     const jsonMusicaCompleta = await pegarMusica.json(); // Transformando as informações em um JSON
 
-    mostrarCarregando(false); // Esconde o carregar
-
     bdMusicas = jsonMusicaCompleta.data; // Guardando todas as músicas da pesquisa em um BD
 
-    limparExibicao(); // Limpando a exibição do áudio da música
+    mostrarCarregando(false); // Esconde o carregar
+
     preencherMusica(jsonMusicaCompleta.data); // Preencher as músicas no HTML
+
+    scroll({ top: 180, left: 0, behavior: 'smooth' });
 }
