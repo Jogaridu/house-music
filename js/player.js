@@ -8,9 +8,12 @@ const tocandoMusica = ($audio) => {
 
 }
 
+
 const pauseMusica = ($audio) => $audio.pause();
 
+
 const mutarMusica = ($audio) => $audio.muted = true;
+
 
 const desmutarMusica = ($audio) => $audio.muted = false;
 
@@ -18,11 +21,19 @@ const desmutarMusica = ($audio) => $audio.muted = false;
 const barraTempoAtualiza = ($audio) => {
 
     const $barra = document.getElementById("barra");
-    const $marcador = document.getElementById("marcador");
 
-    const barraProgressoAtual = parseInt(($audio.currentTime / $audio.duration) * 100);
+    const barraProgressoAtual = parseFloat($audio.currentTime.toFixed(2));
 
-    $barra.style.width = `${barraProgressoAtual}%`;
-    $marcador.style.left = `${barraProgressoAtual - 1}%`;
+    $barra.max = $audio.duration;
+    $barra.value = barraProgressoAtual;
+
+}
+
+
+const alterarBarraTempo = (evento, $audio) => {
+
+    const tempoEscolhido = evento.target.value;
+
+    $audio.currentTime = tempoEscolhido;
 
 }

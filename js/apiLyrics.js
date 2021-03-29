@@ -31,8 +31,7 @@ const preencherLetra = (idMusica, letra = undefined) => {
                     </div>
 
                     <div id="barraTempo">
-                        <div id="barra"></div>
-                        <div id="marcador"></div>
+                        <input type="range" id="barra" step="0.1">
                     </div>
 
                     <div id="player">

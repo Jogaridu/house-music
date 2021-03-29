@@ -10,6 +10,8 @@ function iniciarConstantesPlayer() {
 
     const $botaoConteudoAlbum = document.getElementById("conteudoAlbum");
 
+    const $barra = document.getElementById("barra");
+
     $botaoTocarMusica.addEventListener("click", () => animacaoTocandoMusica($botaoConteudoAlbum, $botaoTocarMusica, $botaoPausarMusica));
 
     $botaoPausarMusica.addEventListener("click", () => animacaoPauseMusica($botaoConteudoAlbum, $botaoTocarMusica, $botaoPausarMusica));
@@ -22,8 +24,8 @@ function iniciarConstantesPlayer() {
 
     $botaoPausarMusica.addEventListener("click", () => pauseMusica($audio));
 
-    $botaoMutarMusica.addEventListener("click", () => mutarMusica($audio));
-
     $botaoDesmutarMusica.addEventListener("click", () => desmutarMusica($audio));
+
+    $barra.addEventListener("change", (evento) => alterarBarraTempo(evento, $audio));
 
 }

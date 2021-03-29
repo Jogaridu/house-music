@@ -2,6 +2,7 @@
 
 const $botaoPesquisar = document.getElementById("btnPesquisar");
 const $inputPesquisar = document.getElementById("nomeArtista");
+iniciarConstantesPlayer();
 
 $botaoPesquisar.addEventListener("click", () => {
 

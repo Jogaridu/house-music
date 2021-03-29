@@ -3,6 +3,7 @@
 const $caixaUsuarioImagem = document.getElementById("imgCriador");
 const $caixaRedeSocial = document.getElementById("caixaRedeSocial");
 
+
 const resetAnimacao = (el) => {
 
     el.style.animation = 'none';
@@ -18,12 +19,14 @@ const mostrarRedeSocial = () => {
 
 }
 
+
 const esconderRedeSocial = () => {
 
     $caixaRedeSocial.classList.remove("mostrarAniamacaoUsuario");
     $caixaRedeSocial.classList.add("esconderAniamacaoUsuario");
 
 }
+
 
 const mostrarEsconderRedeSocial = () => {
     const classeRedeSocial = $caixaRedeSocial.getAttribute("class");
@@ -39,11 +42,13 @@ const mostrarEsconderRedeSocial = () => {
     }
 }
 
+
 const desabilitarElemento = (evento) => {
 
     evento.animationName === "esconderAnimacaoUsuario" ? $caixaRedeSocial.style.display = "none" : "";
 
 }
+
 
 const mostrarCarregando = (condicao) => {
 
@@ -68,6 +73,7 @@ const mostrarCarregando = (condicao) => {
     }
 
 }
+
 
 const mostrarCarregandoCard = (condicao, card) => {
 
@@ -99,6 +105,7 @@ const mostrarCarregandoCard = (condicao, card) => {
 
 }
 
+
 const animacaoTocandoMusica = ($botaoConteudoAlbum, $botaoTocarMusica, $botaoPausarMusica) => {
 
     resetAnimacao($botaoConteudoAlbum);
@@ -110,6 +117,7 @@ const animacaoTocandoMusica = ($botaoConteudoAlbum, $botaoTocarMusica, $botaoPau
     $botaoPausarMusica.classList.remove("esconde"); // Exibe botão de pausar
 
 }
+
 
 const animacaoPauseMusica = ($botaoConteudoAlbum, $botaoTocarMusica, $botaoPausarMusica) => {
 
@@ -123,12 +131,14 @@ const animacaoPauseMusica = ($botaoConteudoAlbum, $botaoTocarMusica, $botaoPausa
 
 }
 
+
 const animacaoMutarMusica = ($botaoMutarMusica, $botaoDesmutarMusica) => {
 
     $botaoMutarMusica.classList.add("esconde"); // Esconde botão de mutar
     $botaoDesmutarMusica.classList.remove("esconde"); // Exibe botão de desmutar
 
 }
+
 
 const animacaoDesmutarMusica = ($botaoMutarMusica, $botaoDesmutarMusica) => {
 
