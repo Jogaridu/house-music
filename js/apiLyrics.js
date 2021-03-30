@@ -28,10 +28,11 @@ const preencherLetra = (idMusica, letra = undefined) => {
                     <div id="conteudoAlbum" class="conteudoAlbum">
                         <p class="formatarTexto">${arrayMusicaInfo.artist.name}</p>
                         <p class="formatarTexto destaque">${arrayMusicaInfo.title_short}</p>
+                        <p id="tempoMusica" class="formatarTexto tempoMusica">00:00 / 00:30</p>
                     </div>
 
                     <div id="barraTempo">
-                        <input type="range" id="barra" step="0.1">
+                        <input type="range" id="barra" step="0.1" value="0">
                     </div>
 
                     <div id="player">
@@ -41,7 +42,7 @@ const preencherLetra = (idMusica, letra = undefined) => {
                         <img src="/image/muta.png" alt="Opção do player" class="iconePlayer esconde" id="desmutar">
                     </div>
 
-                    <audio controls id="audio" class="esconde">
+                    <audio controls id="audio" class="esconde" onended="animacaoPauseMusica">
                          <source src="${arrayMusicaInfo.preview}">
                      </audio>
                 </div>

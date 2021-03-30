@@ -277,6 +277,7 @@ input[type=button]:active {
 }
 
 .conteudoAlbum {
+    position: relative;
     background: rgb(150,150,150);
     background: linear-gradient(180deg, rgba(150,150,150,0.4654236694677871) 0%, rgba(255,255,255,1) 48%, rgba(150,150,150,0.47) 100%);
 }
@@ -329,6 +330,17 @@ input[type=button]:active {
 .destaque {
     font-weight: 600;
     line-height: 0;
+
+}
+
+.tempoMusica {
+    height: 15px;
+    width: 40%;
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    font-size: 0.8rem;
+
 }
 
 .conteudoAlbum:active {
@@ -444,7 +456,7 @@ input[type=button]:active {
     }
 
     to {
-        height: 100px;
+        height: 130px;
     }
 }
 
