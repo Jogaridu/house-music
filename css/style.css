@@ -365,7 +365,8 @@ input[type=button]:active {
 }
 
 #caixaExibicao span div {
-    /* box-shadow: 0px 0px 15px black; */
+    position: sticky;
+    top: 100px;
 }
 
 #player {
