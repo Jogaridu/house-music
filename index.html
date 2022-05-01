@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music House</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="component/loading.css">
-    <link rel="stylesheet" href="component/loading-card.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/component/loading.css">
+    <link rel="stylesheet" href="/component/loading-card.css">
 </head>
+
 <body>
     <header>
         <div id="caixaUsuario">
-            <img src="image/imgCriador.PNG" alt="Imagem do criador do site" id="imgCriador">
+            <img src="/image/imgCriador.PNG" alt="Imagem do criador do site" id="imgCriador">
 
             <h2>JORGE GABRIEL</h2>
         </div>
 
         <div id="caixaRedeSocial">
-            
+
             <a href="https://github.com/Jogaridu" target="_blank">
-                <figure class="imgRedeSocial"><img src="image/imgGit.png" alt="Icone GitHub"></figure>
+                <figure class="imgRedeSocial"><img src="/image/imgGit.png" alt="Icone GitHub"></figure>
                 <figcaption class="formatarTexto">GitHub</figcaption>
             </a>
 
             <a href="https://www.linkedin.com/in/jorge-gabriel-ricci-06aa581a1/" target="_blank">
-                <figure class="imgRedeSocial"><img src="image/imgLinkedin.png" alt="Icone LinkedIn"></figure>
+                <figure class="imgRedeSocial"><img src="/image/imgLinkedin.png" alt="Icone LinkedIn"></figure>
                 <figcaption class="formatarTexto">LinkedIn</figcaption>
             </a>
 
@@ -35,14 +37,15 @@
     <main id="caixaCentraliza">
         <div id="caixaPesquisa">
             <input type="text" id="nomeArtista" placeholder="Banda/Cantor...">
-            
+
             <input type="button" id="btnPesquisar" value="Pesquisar">
         </div>
 
         <div id="caixaExibicao">
             <span class="esconde">
                 <div>
-                    <img src="https://e-cdns-images.dzcdn.net/images/cover/5df065fdcbaffd0f83d09789bad9d2db/500x500-000000-80-0-0.jpg" alt="Coldplay" class="imgAlbum"> <br>
+                    <img src="https://e-cdns-images.dzcdn.net/images/cover/5df065fdcbaffd0f83d09789bad9d2db/500x500-000000-80-0-0.jpg"
+                        alt="Coldplay" class="imgAlbum"> <br>
 
                     <div id="conteudoAlbum" class="conteudoAlbum">
                         <p class="formatarTexto">Coldplay</p>
@@ -62,8 +65,8 @@
                     </div>
 
                     <audio controls id="audio" class="esconde">
-                         <source src="https://cdns-preview-8.dzcdn.net/stream/c-8f919512e51faf22f342d3727ff751dc-3.mp3">
-                     </audio>
+                        <source src="https://cdns-preview-8.dzcdn.net/stream/c-8f919512e51faf22f342d3727ff751dc-3.mp3">
+                    </audio>
                 </div>
             </span>
         </div>
@@ -72,19 +75,43 @@
             <ul id="listaCards">
                 <div id="carregar" class="boxLoading esconde">
                     <div class="loading">
-                        <div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div>
+                        <div>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div></div>
+                        </div>
                     </div>
                 </div>
             </ul>
         </div>
     </main>
-    
+
     <script src="js/constantes.js"></script>
     <script src="js/animacoes.js"></script>
     <script src="js/apiDeezer.js"></script>
     <script src="js/apiLyrics.js"></script>
     <script src="js/player.js"></script>
     <script src="js/script.js"></script>
-    
+
 </body>
+
 </html>
